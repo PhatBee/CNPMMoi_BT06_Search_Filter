@@ -1,11 +1,13 @@
 const mongoose = require('mongoose');
 
 const productSchema = new mongoose.Schema({
-  title: { type: String, required: true },
+  name: { type: String, required: true },
   description: String,
   price: Number,
   category: { type: String, index: true }, // index để tìm theo danh mục nhanh hơn
   image: String,
+  discount: { type: Number, default: 0 },
+  views: { type: Number, default: 0 },
   createdAt: { type: Date, default: Date.now }
 });
 

@@ -17,5 +17,6 @@ apiRoutes.post("/login", handleLogin);
 apiRoutes.get("/user", getUser);
 apiRoutes.get("/account", delay, getAccount);
 apiRoutes.get("/products", listProducts);
+apiRoutes.get("/products/search", searchProducts);
 
 module.exports = apiRoutes;
