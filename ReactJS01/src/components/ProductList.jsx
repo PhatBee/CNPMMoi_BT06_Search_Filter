@@ -14,3 +14,26 @@ export default function ProductList({ products }) {
     </div>
   );
 }
+
+// function ProductList({ products }) {
+//   return (
+//     <div>
+//       {products.length === 0 ? (
+//         <p>Không có sản phẩm nào</p>
+//       ) : (
+//         products.map((p) => (
+//           <div key={p.id}>
+//             <h3>{p.name}</h3>
+//             <p>Giá: {p.price}</p>
+//             <p>Danh mục: {p.category}</p>
+//             <p>Khuyến mãi: {p.discount}%</p>
+//             <p>Lượt xem: {p.views}</p>
+//           </div>
+//         ))
+//       )}
+//     </div>
+//   );
+// }
+
+
+

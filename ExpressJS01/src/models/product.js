@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 
 const productSchema = new mongoose.Schema({
   name: { type: String, required: true },
-  description: String,
   price: Number,
   category: { type: String, index: true }, // index để tìm theo danh mục nhanh hơn
   image: String,

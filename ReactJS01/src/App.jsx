@@ -4,6 +4,8 @@ import axios from "./util/axios.customize"
 import { useContext, useEffect } from "react"
 import { AuthContext } from "./components/context/auth.context";
 import { Spin } from "antd";
+
+
 function App() {
   const { setAuth, appLoading, setAppLoading } = useContext(AuthContext);
   useEffect(() => {
@@ -34,13 +36,12 @@ function App() {
         }}>
           <Spin />
         </div>
-        :
-        <>
+        :<>
           <Header />
           <Outlet />
         </>
       }
-    </div>
+      </div>
   )
 }
 export default App

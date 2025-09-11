@@ -36,3 +36,16 @@ const URL_API = "/v1/api/products";
     return { products: [], page: 1, limit: 12, totalPages: 0, totalItems: 0 };
   }
 };
+
+export const searchProductsApi = async (filters) => {
+    const URL_API = "/v1/api/products/search";
+    try {
+        const res = await axios.get(URL_API, { params: filters });
+        console.log("Search products raw: ", res);
+        console.log("Search products data: ", res.data);
+        return res;
+    } catch (err) {
+        console.error("Search products error: ", err);
+        return { products: [] };
+    } 
+};
