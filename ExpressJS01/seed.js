@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Product = require("../ExpressJS01/src/models/product"); // đường dẫn đến file bạn vừa định nghĩa Product
 
 // 🔹 Kết nối MongoDB
-mongoose.connect("mongodb+srv://phatbee:Conheodatnhieutien1%24@potadoption.wtjtbjs.mongodb.net/CNPMMoi_BT04?retryWrites=true&w=majority&appName=PotAdoption", {
+mongoose.connect(process.env.MONGODB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
